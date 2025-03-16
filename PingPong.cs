@@ -38,6 +38,24 @@ class Ball
     }
 }
 
+class Paddle
+{
+    public int X { get; private set; }
+    public int Y { get; private set; }
+    private int originalX, originalY;
+
+    public Paddle(int posX, int posY)
+    {
+        originalX = posX;
+        originalY = posY;
+        X = posX;
+        Y = posY;
+    }
+    public void Reset() { X = originalX; Y = originalY; }
+    public void MoveUp() { Y--; }
+    public void MoveDown() { Y++; }
+}
+
 class Program
 {
 
